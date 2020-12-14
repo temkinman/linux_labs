@@ -1,0 +1,9 @@
+Первая строка в ./fileread.txt :
+String 1
+
+Вторая строка в ./fileread.txt :
+String 2
+
+String 4
+String 5
+String 6

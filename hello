@@ -1,0 +1,54 @@
+#!/bin/bash
+
+
+#echo $HOME
+#echo ${1}
+
+
+#find $HOME -type d -name ${1}
+
+#echo "path_dir $path_dir"
+
+#man find
+#find ./${1}/ -size +50k -size -100k -print0 | xargs -0 ls -lS -r
+
+
+#-path '*/\.*'
+
+#work but doesn't print size
+FILESIZE=$(ls -lah $FILENAME | awk '{ print $5}')
+#echo "Filesize is $FILESIZE"
+
+#find ./${3} -size +$1k -size -$2k -type f -print0 | xargs -0 du -h | sort -r -h
+
+#find ./${3}/ -size +$1k -size -$2k -print0 | xargs -0 ls -lS -r
+
+find ./${3} -size +$1k -size -$2k -type f -printf "%p \t%s byte\n"
+
+#find ./${3}  -size +$1k -size -$2k -type f  -print0 | xargs -0 du -h | sort -r -h
+
+
+
+#for a in 7 8 9 11
+#do
+#  echo "$a "
+#done
+
+#echo
+#echo
+
+#a=2334                   # Целое число.
+#let "a += 1"
+#echo "a = $a "           # a = 2335
+#echo  
+
+#veg1=carrots
+#veg2=tomatoes
+
+#if [[ "$veg1" < "$veg2" ]]
+#then
+#  echo "Не смотря на то, что в словаре слово $veg1 предшествует слову $veg2,"
+#  echo "это никак не отражает мои кулинарные предпочтения."
+#else
+#  echo "Интересно. Каким словарем вы пользуетесь?"
+#fi
